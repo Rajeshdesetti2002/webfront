@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webpage</title>
+    <link rel="stylesheet" href="website3.css">
+    <script src="https://kit.fontawesome.com/30bceaa557.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  
+    <div id="rajesh">
+        <div class="navbar">
+            <img src="image3.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#" >Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+
+        </div>
+        <div class="header-text">  
+            <p>Hello,</p>
+            <h1>This is <span>Rajesh </span><br>an engineering student</h1>       
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                 <img src="image16.jpg" > 
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                     <p>Iam Desetti.Rajesh studying in IIITDM Kancheepuram in 2nd year which is situated in the outskirts of chennai.
+                        I came from the place named Vizianagaram which is in the state of Andhra Pradesh.My aim is  becoming  an good 
+                        software engineer.Below given are some of my skills,hobbies,motives that i have in my life.
+                     </p>
+                     <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('hobbies')">Hobbies</p>
+                        <p class="tab-links" onclick="opentab('skills')">skills</p>
+                        <p class="tab-links" onclick="opentab('motives')">Motives</p>
+                     </div>
+                     <div class="tab-contents active-tab" id="hobbies">
+                        <ul>
+                            <li><span>Reading</span></li>
+                            <li><span>Playing cricket</span></li>
+                            <li><span>Watching movies</span></li>
+                            <li><span>Spending with friends</span></li>
+                        </ul>
+                     </div> 
+                     <div class="tab-contents" id="skills">
+                        <ul>
+                            <li><span>Coding</span></li>
+                            <li><span>Dancing</span></li>
+                            <li><span>Batting</span></li>
+                            <li><span>Swimming</span></li>
+                        </ul>
+                     </div> 
+                     <div class="tab-contents" id="motives">
+                        <ul>
+                            <li><span>A good software enginner</span></li>
+                            <li><span>Be cool be happy</span></li>
+                        </ul>
+                     </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="education" id="education">
+        <h2 id="Educate"></h2>
+        <div class="edu">
+            <img class="img1" src="image20.jpg">
+            <img class="img2" src="image11.jpg">
+            <img class="img3" src="image12.jpg">
+        <div class="edu-text">
+            <h2>Education</h2>
+            <p>I have Completed my 10th in Surya School,Ranasthalam <br>
+            I Completed my Intermediate in Sri Chaithanya junior college <br>
+            I am studying BTech 2nd year from CSE in IIITDM Kancheepuram</p>
+        </div>    
+        </div>
+        
+    </section>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                 <h1 class="sub-title">Contact Me</h1>
+                 <p><i class="fas fa-paper-plane"></i>rajeshdesetti2002@gmail.com</p>
+                 <p><i class="fa-solid fa-phone"></i>7993760893</p>
+                 <div class="social-icons">
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://web.whatsapp.com"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://in.facebook.com"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/" ><i class="fab fa-facebook"></i></a>
+                 </div>
+                </div>
+                <div class="contact-right">
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+ <script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+ </script>
+ <script>
+    var sidemenu=document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+ </script>   
+</body>
+</html>
